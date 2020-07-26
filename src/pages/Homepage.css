@@ -1,0 +1,77 @@
+.homepage {
+  height: 1000px;
+}
+
+.homepage .img1 {
+  width: 100%;
+}
+
+.homepage .image-text1 {
+  position: relative;
+  text-align: center;
+  color: black;
+}
+
+.homepage .image-text1 .text1 {
+  padding: 2rem;
+  margin-bottom: 20px;
+  position: absolute;
+  left: 75%;
+  top: 40%;
+  background-color: white;
+}
+.homepage .image-text1 .text2 {
+  padding: 2rem;
+  margin-bottom: 20px;
+  position: absolute;
+  left: 75%;
+  top: 50%;
+  background-color: white;
+}
+.homepage .image-text1 .text3 {
+  padding: 2rem;
+  margin-bottom: 20px;
+  position: absolute;
+  left: 75%;
+  top: 60%;
+  background-color: white;
+}
+
+.homepage .image-text2 {
+  margin-top: 10rem;
+  position: relative;
+  background-color: blue;
+  height: 30rem;
+}
+
+.homepage .img2 {
+  margin-right: 10rem;
+  width: 40%;
+  position: absolute;
+  left: 50%;
+}
+
+.homepage .image-text2 .text1 {
+  padding: 2rem;
+  margin-bottom: 20px;
+  top: 30%;
+  left: 45%;
+  position: absolute;
+  background-color: white;
+}
+.homepage .image-text2 .text2 {
+  padding: 2rem;
+  margin-bottom: 20px;
+  top: 50%;
+  left: 45%;
+  position: absolute;
+  background-color: white;
+}
+.homepage .image-text2 .text3 {
+  padding: 2rem;
+  margin-bottom: 20px;
+  top: 70%;
+  left: 45%;
+  position: absolute;
+  background-color: white;
+}

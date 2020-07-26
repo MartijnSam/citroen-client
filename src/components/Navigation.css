@@ -1,0 +1,155 @@
+.fixed-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  width: 80%;
+  height: auto;
+  margin: auto;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  background-color: white;
+  font-family: "Accidental-Presidency";
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+
+/* The element at the top of the page right after the fixed navigation bar
+     MUST have sufficient top margin or else it will be covered by the bar */
+.content {
+  margin-top: 20px;
+}
+
+/* Example responsive navigation menu  */
+.fixed-nav-bar li,
+.fixed-nav-bar a {
+  text-decoration: none;
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  margin: 0;
+}
+.menu ul {
+  padding-inline-start: 0;
+}
+.menu-items-left {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 40%;
+}
+.menu-items-right {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 40%;
+}
+
+.menu a,
+.menu a:visited {
+  color: black;
+}
+.menu a:hover,
+.menu a:target {
+  color: black;
+}
+.sitename img {
+  min-height: 150px;
+}
+.sitename {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30%;
+  height: 150%;
+}
+a.sitename,
+a:visited.sitename {
+  color: #e0e0e0;
+}
+.menu-items-left li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.menu-items-right li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.show,
+.hide {
+  display: none;
+  padding-left: 15px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center left;
+  color: #dde1e2;
+}
+/* .show {
+  background-image: url(assets/down-arrow-icon.png);
+}
+.hide {
+  background-image: url(assets/up-arrow-icon.png); */
+/* } */
+
+@media only screen and (max-width: 800px) {
+  .menu {
+    position: relative;
+    width: 100%;
+  }
+  .sitename {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    margin-left: 0px;
+  }
+  .menu-items-show {
+    display: none;
+    width: 100%;
+    margin-top: 50px;
+    background-color: #008378;
+  }
+  .menu-items-show li {
+    display: block;
+    text-align: center;
+  }
+  .show,
+  .hide {
+    position: absolute;
+    top: 0;
+    right: 15px;
+  }
+  .show {
+    display: inline-block;
+  }
+  .hide {
+    display: none;
+  }
+  #menu:target .show {
+    display: none;
+  }
+  #menu:target .hide,
+  #menu:target .menu-items-show {
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 220px) {
+  .sitename,
+  .show,
+  .hide {
+    font-size: 14px;
+  }
+}
