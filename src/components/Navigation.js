@@ -1,44 +1,75 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navigation.css";
 import logo from "./../images/logo.png";
 import { NavLink } from "react-router-dom";
 
 export default function Navigation() {
+  const [showMenu, setShowMenu] = useState(false);
+
+  function toggleMenu() {
+    setShowMenu(!showMenu);
+  }
+  const menuItemsLeft = ["OVER", "BORRELPLANKEN", "TAARTEN"];
+  const menuItemsRight = ["FOTO'S", "ERVARINGEN", "CONTACT"];
+  const dropdownMenuItems = menuItemsLeft.concat(menuItemsRight);
   return (
-    <nav class="fixed-nav-bar">
-      <div id="menu" class="menu">
-        <a class="show" href="#menu">
-          Menu
-        </a>
-        <a class="hide" href="#hidemenu">
-          Menu
-        </a>
-        <ul class="menu-items-left">
-          <li>
-            <NavLink to="/over">OVER</NavLink>
-          </li>
-          <li>
-            <NavLink to="/borrelplanken">BORRELPLANKEN</NavLink>
-          </li>
-          <li>
-            <NavLink to="/taarten">TAARTEN</NavLink>
-          </li>
-        </ul>
-        <NavLink class="sitename" to="/">
-          <img src={logo} />
-        </NavLink>
-        <ul class="menu-items-right">
-          <li>
-            <NavLink to="/fotos">FOTO'S</NavLink>
-          </li>
-          <li>
-            <NavLink to="/ervaringen">ERVARINGEN</NavLink>
-          </li>
-          <li>
-            <NavLink to="/contact">CONTACT</NavLink>
-          </li>
-        </ul>
+    <>
+      {showMenu ? (
+        <div class="dropdown">
+          {dropdownMenuItems.map((item, i) => {
+            return (
+              <li style={{ animationDelay: `${100 * i}ms` }} key={i}>
+                <NavLink
+                  onClick={() => toggleMenu()}
+                  to={`/${item.toLowerCase().replace("'", "")}`}
+                >
+                  {item}
+                </NavLink>
+              </li>
+            );
+          })}
+        </div>
+      ) : (
+        <></>
+      )}
+
+      <div class="fixed-nav-bar">
+        <div id="menu" class="menu">
+          <ul class="menu-items" id="menu-items-left">
+            {menuItemsLeft.map((item) => {
+              return (
+                <li key={item}>
+                  <NavLink to={`/${item.toLowerCase()}`}>{item}</NavLink>
+                </li>
+              );
+            })}
+          </ul>
+          <NavLink class="sitename" to="/">
+            <img src={logo} />
+          </NavLink>
+          <ul class="menu-items" id="menu-items-right">
+            {menuItemsRight.map((item) => {
+              return (
+                <li key={item}>
+                  <NavLink to={`/${item.toLowerCase().replace("'", "")}`}>
+                    {item}
+                  </NavLink>
+                </li>
+              );
+            })}
+          </ul>
+          <div class="hamburger-icon">
+            <p>MENU</p>
+            <div class="hamburger-lemon" onClick={() => toggleMenu()}>
+              <div class="bars">
+                <div class="bar" id="bar1"></div>
+                <div class="bar" id="bar2"></div>
+                <div class="bar" id="bar3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </nav>
+    </>
   );
 }

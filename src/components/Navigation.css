@@ -3,50 +3,30 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
   width: 80%;
-  height: auto;
   margin: auto;
-  border-radius: 2rem;
   margin-top: 2rem;
+  z-index: 9999;
+  border-radius: 2rem;
   background-color: white;
   font-family: "Accidental-Presidency";
-  font-size: 1.8rem;
-  letter-spacing: 2px;
+  font-size: 2vw;
+  letter-spacing: 0.11vw;
   opacity: 0.8;
 }
 
-/* The element at the top of the page right after the fixed navigation bar
-     MUST have sufficient top margin or else it will be covered by the bar */
-.content {
-  margin-top: 20px;
-}
-
-/* Example responsive navigation menu  */
-.fixed-nav-bar li,
-.fixed-nav-bar a {
-  text-decoration: none;
-}
 .menu {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 6rem;
-  margin: 0;
+  height: 7vw;
 }
 .menu ul {
   padding-inline-start: 0;
 }
-.menu-items-left {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 40%;
-}
-.menu-items-right {
+.menu-items {
   margin: 0;
   display: flex;
   justify-content: center;
@@ -54,101 +34,120 @@
   max-width: 40%;
 }
 
-.menu a,
-.menu a:visited {
+.menu-items li {
+  display: inline-block;
+  margin-right: 1.054vh;
+  margin-left: 1.054vh;
+}
+
+.menu-items a {
+  text-decoration: none;
   color: black;
 }
-.menu a:hover,
-.menu a:target {
-  color: black;
-}
+
 .sitename img {
-  margin-top: 5%;
+  margin-top: 6.5%;
+  height: 105%;
 }
 .sitename {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 30%;
+  height: 100%;
 }
-a.sitename,
-a:visited.sitename {
-  color: #e0e0e0;
-}
-.menu-items-left li {
-  display: inline-block;
-  margin-right: 10px;
-  margin-left: 10px;
-}
-
-.menu-items-right li {
-  display: inline-block;
-  margin-right: 10px;
-  margin-left: 10px;
-}
-
-.show,
-.hide {
+.hamburger-icon,
+.dropdown {
   display: none;
-  padding-left: 15px;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center left;
-  color: #dde1e2;
 }
-/* .show {
-  background-image: url(assets/down-arrow-icon.png);
-}
-.hide {
-  background-image: url(assets/up-arrow-icon.png); */
-/* } */
 
-@media only screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .menu {
-    position: relative;
-    width: 100%;
+    justify-content: space-between;
   }
-  .sitename {
-    position: absolute;
-    top: 0;
-    left: 15px;
-    margin-left: 0px;
-  }
-  .menu-items-show {
-    display: none;
-    width: 100%;
-    margin-top: 50px;
-    background-color: #008378;
-  }
-  .menu-items-show li {
-    display: block;
-    text-align: center;
-  }
-  .show,
-  .hide {
-    position: absolute;
-    top: 0;
-    right: 15px;
-  }
-  .show {
-    display: inline-block;
-  }
-  .hide {
+  .menu-items {
     display: none;
   }
-  #menu:target .show {
-    display: none;
+  .hamburger-icon {
+    margin-right: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 3vw;
   }
-  #menu:target .hide,
-  #menu:target .menu-items-show {
-    display: inline-block;
+  .hamburger-lemon {
+    margin-left: 1rem;
+    width: 6.5vw;
+    height: 6.5vw;
+    background: yellow;
+    border: 1px solid;
+    border-radius: 75px 15px;
   }
-}
+  .bars {
+    width: 50%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-@media only screen and (max-width: 220px) {
-  .sitename,
-  .show,
-  .hide {
-    font-size: 14px;
+  .bar {
+    width: 100%;
+    margin: 0.32379924446842956vw;
+    height: 0.5vw;
+    background-color: #333;
+  }
+
+  .dropdown {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2vw;
+    background-color: white;
+  }
+
+  .dropdown li {
+    text-align: center;
+    list-style: none;
+    border: 0.1em solid black;
+    border-radius: 0.5em;
+    line-height: 3em;
+    width: 40%;
+    margin: 2px;
+    z-index: 1;
+    transition: 0.5s;
+    animation: rotateX 0.6s ease-out backwards;
+  }
+
+  .dropdown a {
+    color: black;
+    text-decoration: none;
+  }
+
+  @keyframes rotateX {
+    0% {
+      opacity: 0;
+      color: white;
+      transform: scale(1.5) rotateX(-90deg) translateY(-2rem);
+    }
+    50% {
+      transform: rotateX(-20deg);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) rotateX(0deg) translateY(0);
+      color: black;
+    }
   }
 }
