@@ -15,17 +15,19 @@ export default function Navigation() {
   return (
     <>
       {showMenu ? (
-        <div class="dropdown">
+        <div className="dropdown">
           {dropdownMenuItems.map((item, i) => {
             return (
-              <li style={{ animationDelay: `${100 * i}ms` }} key={i}>
-                <NavLink
-                  onClick={() => toggleMenu()}
-                  to={`/${item.toLowerCase().replace("'", "")}`}
-                >
-                  {item}
-                </NavLink>
-              </li>
+              <NavLink
+                onClick={() => toggleMenu()}
+                to={`/${item.toLowerCase().replace("'", "")}`}
+              >
+                <div className="dropdown-item">
+                  <li style={{ animationDelay: `${100 * i}ms` }} key={i}>
+                    <span>{item}</span>
+                  </li>
+                </div>
+              </NavLink>
             );
           })}
         </div>
@@ -33,38 +35,56 @@ export default function Navigation() {
         <></>
       )}
 
-      <div class="fixed-nav-bar">
-        <div id="menu" class="menu">
-          <ul class="menu-items" id="menu-items-left">
-            {menuItemsLeft.map((item) => {
+      <div className="fixed-nav-bar">
+        <div id="menu" className="menu">
+          <ul className="menu-items" id="menu-items-left">
+            {menuItemsLeft.map((item, i) => {
               return (
-                <li key={item}>
-                  <NavLink to={`/${item.toLowerCase()}`}>{item}</NavLink>
-                </li>
+                <div className="menu-item" key={i}>
+                  <li key={i}>
+                    <NavLink
+                      activeStyle={{ borderBottom: "0.1em solid black" }}
+                      exact
+                      to={`/${item.toLowerCase()}`}
+                    >
+                      {item}
+                    </NavLink>
+                  </li>
+                </div>
               );
             })}
           </ul>
-          <NavLink class="sitename" to="/">
-            <img src={logo} />
+          <NavLink
+            className="sitename"
+            to="/"
+            onClick={() => setShowMenu(false)}
+          >
+            <img src={logo} alt="lemon logo" />
           </NavLink>
-          <ul class="menu-items" id="menu-items-right">
-            {menuItemsRight.map((item) => {
+          <ul className="menu-items" id="menu-items-right">
+            {menuItemsRight.map((item, i) => {
               return (
-                <li key={item}>
-                  <NavLink to={`/${item.toLowerCase().replace("'", "")}`}>
-                    {item}
-                  </NavLink>
-                </li>
+                <div className="menu-item" key={i}>
+                  <li key={i}>
+                    <NavLink
+                      activeStyle={{ borderBottom: "0.1em solid black" }}
+                      exact
+                      to={`/${item.toLowerCase().replace("'", "")}`}
+                    >
+                      {item}
+                    </NavLink>
+                  </li>
+                </div>
               );
             })}
           </ul>
-          <div class="hamburger-icon">
+          <div className="hamburger-icon">
             <p>MENU</p>
-            <div class="hamburger-lemon" onClick={() => toggleMenu()}>
-              <div class="bars">
-                <div class="bar" id="bar1"></div>
-                <div class="bar" id="bar2"></div>
-                <div class="bar" id="bar3"></div>
+            <div className="hamburger-lemon" onClick={() => toggleMenu()}>
+              <div className="bars">
+                <div className="bar" id="bar1"></div>
+                <div className="bar" id="bar2"></div>
+                <div className="bar" id="bar3"></div>
               </div>
             </div>
           </div>
