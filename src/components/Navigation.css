@@ -13,6 +13,7 @@
   font-family: "Accidental-Presidency";
   font-size: 1.8rem;
   letter-spacing: 2px;
+  opacity: 0.8;
 }
 
 /* The element at the top of the page right after the fixed navigation bar
@@ -32,7 +33,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 5rem;
+  height: 6rem;
   margin: 0;
 }
 .menu ul {
@@ -62,15 +63,13 @@
   color: black;
 }
 .sitename img {
-  min-height: 150px;
+  margin-top: 5%;
 }
 .sitename {
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 30%;
-  height: 150%;
 }
 a.sitename,
 a:visited.sitename {

@@ -1,5 +1,5 @@
 .homepage {
-  height: 1000px;
+  font-size: 1vh;
 }
 
 .homepage .img1 {
@@ -12,66 +12,81 @@
   color: black;
 }
 
-.homepage .image-text1 .text1 {
-  padding: 2rem;
-  margin-bottom: 20px;
+.homepage .textbanner {
+  box-shadow: 0.6322444678609063vh 0.6322444678609063vh 0.8429926238145417vh
+    rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
+  border-radius: 1.054vh;
+  opacity: 0.81;
+  padding: 0.5em;
   position: absolute;
-  left: 75%;
+  font-family: "Accidental-Presidency";
+  font-size: 2.4vw;
+  letter-spacing: 0.2107481559536354vh;
+}
+#text1-1 {
   top: 40%;
-  background-color: white;
+  left: 62.3%;
+  width: 25%;
 }
-.homepage .image-text1 .text2 {
-  padding: 2rem;
-  margin-bottom: 20px;
-  position: absolute;
-  left: 75%;
+#text1-2 {
   top: 50%;
-  background-color: white;
+  left: 62.3%;
+  width: 25%;
 }
-.homepage .image-text1 .text3 {
-  padding: 2rem;
-  margin-bottom: 20px;
-  position: absolute;
-  left: 75%;
+#text1-3 {
   top: 60%;
-  background-color: white;
+  left: 62.3%;
+  width: 25%;
 }
 
 .homepage .image-text2 {
   margin-top: 10rem;
   position: relative;
-  background-color: blue;
-  height: 30rem;
+  text-align: center;
+  color: black;
 }
 
 .homepage .img2 {
   margin-right: 10rem;
   width: 40%;
-  position: absolute;
-  left: 50%;
+  margin-left: 50%;
 }
 
-.homepage .image-text2 .text1 {
-  padding: 2rem;
-  margin-bottom: 20px;
-  top: 30%;
-  left: 45%;
-  position: absolute;
-  background-color: white;
+#text2-1 {
+  top: 40%;
+  left: 20%;
+  width: 35%;
 }
-.homepage .image-text2 .text2 {
-  padding: 2rem;
-  margin-bottom: 20px;
-  top: 50%;
-  left: 45%;
-  position: absolute;
-  background-color: white;
+#text2-2 {
+  top: 55%;
+  left: 20%;
+  width: 35%;
 }
-.homepage .image-text2 .text3 {
-  padding: 2rem;
-  margin-bottom: 20px;
+#text2-3 {
   top: 70%;
-  left: 45%;
-  position: absolute;
-  background-color: white;
+  left: 20%;
+  width: 35%;
+}
+
+.homepage .image-text3 {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.homepage .img3 {
+  width: 40%;
+}
+
+#text3 {
+  text-align: left;
+  margin-left: 5%;
+  width: 35%;
+  font-size: 1.35vw;
 }
