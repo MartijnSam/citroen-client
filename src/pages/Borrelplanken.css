@@ -66,7 +66,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: flex-end;
   position: relative;
   border-radius: 2rem;
   border: black 0.01rem solid;
@@ -151,8 +151,8 @@
 .close-button {
   margin-top: 2%;
   margin-right: 2%;
-  width: 1.8vw;
-  height: 1.8vw;
+  width: 2vw;
+  height: 2vw;
   opacity: 1;
 }
 .close-button:hover {
@@ -161,7 +161,6 @@
 .close-button:before,
 .close-button:after {
   position: absolute;
-  right: 5%;
   content: " ";
   height: 33px;
   width: 2px;
