@@ -1,4 +1,7 @@
 .App {
   height: 100%;
   width: 100%;
+  font-size: 1.35vw;
+  font-family: "Accidental-Presidency";
+  letter-spacing: 0.11vw;
 }
