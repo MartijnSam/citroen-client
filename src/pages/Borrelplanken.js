@@ -1,69 +1,9 @@
 import React, { useState } from "react";
-import image1 from "../images/borrelplanken/image1.jpg";
+import borrelData from "../products/borrelplanken.json";
 import "./Borrelplanken.css";
 
 export default function Borrelplanken() {
   const [showPopup, setShowPopup] = useState(false);
-
-  const borrelData = [
-    {
-      name: "citroen",
-      img: image1,
-      content: [
-        "Twee soorten kaas",
-        "Twee soorten vleeswaren",
-        "Gedroogde worst",
-        "Cherrytomaatjes",
-        "Olijven",
-        "Noten",
-        "Druiven",
-        "Verse ansjovis- of kruidenboter",
-        "Brood",
-        "Toastjes",
-      ],
-      descr:
-        "Rhoncus commodo, nulla. Fusce quis ipsum. Nulla neque massa, feugiat sed, commodo in, adipiscing ut, est. In fermentum mattis ligula. Nulla ipsum. Vestibulum condimentum condimentum augue. Nunc purus risus, volutpat sagittis, lobortis at, dignissim sed, sapien. Fusce porttitor iaculis ante. Curabitur eu arcu. Morbi quam purus, tempor eget, ullamcorper feugiat, commodo ullamcorper, neque.",
-    },
-    {
-      name: "luxe",
-      img: image1,
-      content: [
-        "Drie soorten kaas",
-        "Drie soorten vleeswaren",
-        "Gedroogde worst",
-        "Cherrytomaatjes",
-        "Olijven",
-        "Noten",
-        "Druiven",
-        "Verse ansjovis- of kruidenboter",
-        "Brood",
-        "Toastjes",
-        "Verse hapjes",
-        "Hummus",
-        "Verse groentes",
-      ],
-      descr:
-        "Rhoncus commodo, nulla. Fusce quis ipsum. Nulla neque massa, feugiat sed, commodo in, adipiscing ut, est. In fermentum mattis ligula. Nulla ipsum. Vestibulum condimentum condimentum augue. Nunc purus risus, volutpat sagittis, lobortis at, dignissim sed, sapien. Fusce porttitor iaculis ante. Curabitur eu arcu. Morbi quam purus, tempor eget, ullamcorper feugiat, commodo ullamcorper, neque.",
-    },
-    {
-      name: "vega",
-      img: image1,
-      content: [
-        "Drie soorten kaas",
-        "Veel verse groentes",
-        "Olijven",
-        "Noten",
-        "Druiven",
-        "Verse kruidenboter",
-        "Brood",
-        "Toastjes",
-        "Verse hapjes",
-        "Hummus",
-      ],
-      descr:
-        "Rhoncus commodo, nulla. Fusce quis ipsum. Nulla neque massa, feugiat sed, commodo in, adipiscing ut, est. In fermentum mattis ligula. Nulla ipsum. Vestibulum condimentum condimentum augue. Nunc purus risus, volutpat sagittis, lobortis at, dignissim sed, sapien. Fusce porttitor iaculis ante. Curabitur eu arcu. Morbi quam purus, tempor eget, ullamcorper feugiat, commodo ullamcorper, neque.",
-    },
-  ];
 
   function borrelPopup() {
     if (showPopup === false) return <></>;
@@ -78,7 +18,7 @@ export default function Borrelplanken() {
             <div className="borrel-popup-content">
               <div className="borrel-popup-image-container">
                 <img
-                  src={borrelData[showPopup].img}
+                  src={`${process.env.PUBLIC_URL}${borrelData[showPopup].img}`}
                   alt={borrelData[showPopup].name}
                 />
               </div>
@@ -104,7 +44,10 @@ export default function Borrelplanken() {
                 className="borrel-card"
                 onClick={() => setShowPopup(i)}
               >
-                <img src={borrel.img} alt={`borrelplank ${borrel.name}`} />
+                <img
+                  src={`${process.env.PUBLIC_URL}${borrel.img}`}
+                  alt={`borrelplank ${borrel.name}`}
+                />
                 <h3>BORRELPLANK {borrel.name.toUpperCase()}</h3>
                 <ul>
                   {borrel.content.map((ing, i) => {
