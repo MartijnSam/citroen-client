@@ -18,22 +18,14 @@ export default function ImagesCarousel(props) {
         },
       ]}
       breakpoints={{
-        640: {
+        800: {
           plugins: [
+            "infinite",
+            "arrows",
             {
               resolve: slidesToShowPlugin,
               options: {
                 numberOfSlides: 1,
-              },
-            },
-          ],
-        },
-        900: {
-          plugins: [
-            {
-              resolve: slidesToShowPlugin,
-              options: {
-                numberOfSlides: 2,
               },
             },
           ],
