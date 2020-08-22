@@ -1,0 +1,149 @@
+.taarten-page {
+  margin-top: 12rem;
+}
+
+.taarten-page .text-block {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 10rem;
+}
+
+.taarten-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 5vw;
+}
+
+.taarten-card {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 5vw;
+  box-shadow: 0.6322444678609063vh 0.6322444678609063vh 0.8429926238145417vh
+    rgba(206, 196, 111, 0.5);
+}
+
+.taarten-card .left {
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3%;
+}
+
+.taarten-card .right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.taarten-card .tag-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.taarten-card .ingredients-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.taarten-card .tag {
+  border-radius: 4px;
+  border: black 0.01rem solid;
+  box-shadow: 0.6322444678609063vh 0.6322444678609063vh 0.8429926238145417vh
+    rgba(206, 196, 111, 0.5);
+  padding: 3px 5px;
+  display: inline-block;
+  margin-right: 1vw;
+}
+.taarten-card .image-container {
+  width: 95%;
+  height: 80%;
+}
+
+.taarten-card .image-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.taarten-card .image-container img:hover {
+  transform: scale(1.05);
+  transition: ease-in-out;
+  transition-duration: 0.5s;
+}
+
+.carousel-popup {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2vw;
+  background-color: white;
+  animation: fadeIn ease 0.5s;
+  -webkit-animation: fadeIn ease 0.5s;
+  -moz-animation: fadeIn ease 0.5s;
+  -o-animation: fadeIn ease 0.5s;
+  -ms-animation: fadeIn ease 0.5s;
+}
+
+.carousel-content {
+  width: 80%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-content img {
+  max-height: 75%;
+  max-width: inherit;
+}
+
+.close-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.close-container:hover {
+  transform: scale(1.05);
+  transition: ease-in-out;
+  transition-duration: 0.5s;
+}
+
+@media screen and (max-width: 800px) {
+  .taarten-page {
+    font-size: 2.4vw;
+  }
+
+  .taarten-card .left {
+    width: 80%;
+  }
+  .taarten-card .right {
+    width: 80%;
+  }
+}

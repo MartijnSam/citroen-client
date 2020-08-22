@@ -3,8 +3,7 @@ import InstaGrid from "../components/InstaGrid";
 
 export default function Fotos() {
   return (
-    <div>
-      Hallo Foto's
+    <div className="page-fotos" style={{ marginTop: "10rem" }}>
       <InstaGrid />
     </div>
   );
