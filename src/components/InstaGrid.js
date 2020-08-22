@@ -12,5 +12,7 @@ export default function InstaGrid() {
     };
   }, []);
 
-  return <div class="elfsight-app-ff5f3389-d3c8-44ef-8af6-4f1ef8364a7d"></div>;
+  return (
+    <div className="elfsight-app-ff5f3389-d3c8-44ef-8af6-4f1ef8364a7d"></div>
+  );
 }
