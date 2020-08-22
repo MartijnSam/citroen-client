@@ -197,6 +197,9 @@
     text-align: center;
     max-height: unset;
   }
+  .borrel-page {
+    margin-top: 7rem;
+  }
 
   .borrel-popup {
     position: relative;
