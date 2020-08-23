@@ -9,6 +9,7 @@ export default function ImagesCarousel(props) {
       arrows
       centered
       infinite
+      slidesPerPage="2"
       plugins={[
         "infinite",
         "centered",
@@ -24,6 +25,7 @@ export default function ImagesCarousel(props) {
         800: {
           arrows: true,
           infinite: true,
+          slidesPerPage: 1,
           plugins: [
             "infinite",
             "arrows",
