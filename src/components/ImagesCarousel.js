@@ -6,6 +6,9 @@ export default function ImagesCarousel(props) {
   const { images } = props;
   return (
     <Carousel
+      arrows
+      centered
+      infinite
       plugins={[
         "infinite",
         "centered",
@@ -19,6 +22,8 @@ export default function ImagesCarousel(props) {
       ]}
       breakpoints={{
         800: {
+          arrows: true,
+          infinite: true,
           plugins: [
             "infinite",
             "arrows",
