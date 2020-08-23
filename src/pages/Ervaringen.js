@@ -75,18 +75,22 @@ export default function Ervaringen() {
         </p>
       </div>
       <div className="ervaringen-container">
-        {ervaringenData.map((erv) => {
-          return (
-            <div className="ervaring-card" key={erv.id}>
-              <h4>{erv.title}</h4>
-              <h5>{erv.name}</h5>
-              <div className="rating">{starRating(erv.stars)}</div>
-              {moment(erv.date).format("LLLL")}
+        {ervaringenData
+          .sort(function (a, b) {
+            return new Date(b.date) - new Date(a.date);
+          })
+          .map((erv) => {
+            return (
+              <div className="ervaring-card" key={erv.id}>
+                <h4>{erv.title}</h4>
+                <h5>{erv.name}</h5>
+                <div className="rating">{starRating(erv.stars)}</div>
+                {moment(erv.date).format("LLLL")}
 
-              <p>{erv.text}</p>
-            </div>
-          );
-        })}
+                <p>{erv.text}</p>
+              </div>
+            );
+          })}
       </div>
     </div>
   );
