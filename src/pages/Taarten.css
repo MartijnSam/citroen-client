@@ -1,12 +1,11 @@
 .taarten-page {
-  margin-top: 12rem;
+  margin-top: 12vw;
 }
 
 .taarten-page .text-block {
   text-align: center;
   width: 80%;
   margin: auto;
-  margin-top: 10rem;
 }
 
 .taarten-container {
@@ -143,6 +142,8 @@
   .taarten-card {
     justify-content: center;
     text-align: center;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
   }
 
   .taarten-card .left {

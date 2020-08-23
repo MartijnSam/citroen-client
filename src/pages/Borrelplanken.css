@@ -1,5 +1,5 @@
 .borrel-page {
-  margin-top: 12rem;
+  margin-top: 12vw;
 }
 
 .borrel-container {
@@ -199,9 +199,6 @@
     text-align: center;
     max-height: unset;
     font-size: 3vw;
-  }
-  .borrel-page {
-    margin-top: 7rem;
   }
 
   .borrel-popup {

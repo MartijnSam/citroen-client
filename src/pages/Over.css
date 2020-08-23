@@ -1,5 +1,5 @@
 .over-page {
-  margin-top: 10rem;
+  margin-top: 12vw;
   font-size: 1.35vw;
 }
 .over-page .image-text {
@@ -39,7 +39,6 @@
 
 @media screen and (max-width: 800px) {
   .over-page {
-    margin-top: 5rem;
     font-size: 3vw;
   }
   .over-page #img1 {
