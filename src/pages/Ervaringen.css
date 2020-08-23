@@ -1,0 +1,8 @@
+.ervaringen-page {
+  margin-top: 12vw;
+}
+
+.full-star:before {
+  content: "\2605";
+  position: absolute;
+}
