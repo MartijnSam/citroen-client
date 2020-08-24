@@ -1,13 +1,5 @@
 import React from "react";
 import "./App.css";
-import Navigation from "./components/Navigation";
-import Homepage from "./pages/Homepage";
-import Over from "./pages/Over";
-import Ervaringen from "./pages/Ervaringen";
-import Contact from "./pages/Contact";
-import Fotos from "./pages/Fotos";
-import Taarten from "./pages/Taarten";
-import Borrelplanken from "./pages/Borrelplanken";
 import { Switch, Route } from "react-router-dom";
 import UnderConstruction from "./pages/UnderConstruction";
 
